@@ -6,7 +6,7 @@ The Service was developed using the SpringBoot Framework and build with the Apac
 
 As this service is mainly concentrated on providing the HTTP responses based on the various Search HTTP Post requests like autocomplete feature when the prefix of a category is given, search feature when the various brandName, categoryName is provided and also this feature supports the pagination feature where it provides the HTTP responses in the form of multiple plages, keywords count feature where the occurences of the keyword in product tile is calculated to leverage the importance of each product.
 
-Inorder to run the service clone the respository into the local system and then follow the command to cd to the Source code main folder.
+Inorder to run the service clone the respository into the local system and then follow the command to cd to the Source code main folder. Make sure to clone the respository into the local system destop.
 
 ```
 cd ProductsData-as-a-Service/productsRESTAPI/
@@ -38,8 +38,10 @@ docker images
 
 Once the docker image is generated then follow the command below to run the generated docker image in the docker container where the port 8080 in the docker container is exposed to port 8088 in the host operating system.
 
+* Here as the input data is used in the JavaApplication then it is important to import the data file from the local to the docker container while running the docker image, so inorder to do that make sure to clone the repository to the desktop folder of locals system and then follow the command below to simultaneously export the inout data into docker container and run the docker image.
+
 ```
-docker run -p 8088:8080 -v ~/Desktop/productsRESTAPI/data:/data docker-spring-productsrestapi
+docker run -p 8088:8080 -v ~/Desktop/ProductsData-as-a-Service/productsRESTAPI/data:/data docker-spring-productsrestapi
 
 ```
 
