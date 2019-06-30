@@ -156,7 +156,7 @@ This Endpoint is implemented by iterating over every product in the input produc
 
 #### Time and Space Complexity Analysis:
 
-let us consider ```n``` as the length of input data or number of products in the input data, c is the number of conditions given in the request body and v is the number of values in each condition
+let us consider ```n``` as the length of input data or number of products in the input data, ```c``` is the number of conditions given in the request body and ```v``` is the number of values in each condition
 
 #### Time Complexity for this endpoint is : O(n*c*v)
 #### Space Compelexity for this endpoint is : O(n)  
@@ -206,7 +206,7 @@ This Endpoint is implemented by iterating over every product in the input produc
 
 #### Time and Space Complexity Analysis:
 
-let us consider ```n``` as the length of input data or number of products in the input data, m is the number of input keywords from teh request body
+let us consider ```n``` as the length of input data or number of products in the input data, ```m``` is the number of input keywords from the request body
 
 #### Time Complexity for this endpoint is : O(n*m)
 #### Space Compelexity for this endpoint is : O(m)  
