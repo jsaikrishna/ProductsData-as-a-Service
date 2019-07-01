@@ -4,9 +4,9 @@ This Service is an implementation of RESTAPI style around the products data ``` 
 
 The Service was developed using the SpringBoot Framework and build with the Apache Maven. The Application Service is designed by following the MVC (Model-View-Control) Design Pattern where the Model Class (MainApplication.java) and Rest Controller class is (MainController.java) is designed to fulfill the HTTP requests.
 
-As this service is mainly concentrated on providing the HTTP responses based on the various Search HTTP Post requests like autocomplete feature when the prefix of a category is given, search feature when the various brandName, categoryName is provided and also this feature supports the pagination feature where it provides the HTTP responses in the form of multiple plages, keywords count feature where the occurences of the keyword in product tile is calculated to leverage the importance of each product.
+As this service is mainly concentrated on providing the HTTP responses based on the various Search HTTP Post requests like autocomplete feature when the prefix of a category is given, search feature when the various brandName, categoryName is provided and also this feature supports the pagination feature where it provides the HTTP responses in the form of multiple pages, keywords count feature where the occurences of the keyword in product title is calculated to leverage the importance of each product.
 
-Inorder to run the service clone the respository into the local system and then follow the command to cd to the Source code main folder. Make sure to clone the respository into the local system destop.
+Inorder to run the service clone the respository into the ```\desktop``` local system and then follow the command to cd to the Source code main folder. Make sure to clone the respository into the local system destop.
 
 ```
 cd ProductsData-as-a-Service/productsRESTAPI/
@@ -22,14 +22,14 @@ mvn clean install
 
 Inorder to run the Application in Various Platforms/architectures docker containers are used to deploy the application and run it in any platform and architecture. To run the application in docker first install the docker in your local system and start the docker after successfull installation.
 
-So, once the docker is active and runnning, follow the command below to build the application using the docker and generate the docker image. Execute the below command by making sure the Present directory/current directory in Terminal/Command line is ``` /ProductsData-as-a-Service/productsRESTAPI/ ``` .
+So, once the docker is active and running, follow the command below to build the application using the docker and generate the docker image. Execute the below command by making sure the present directory/current directory in Terminal/Command line is ``` /ProductsData-as-a-Service/productsRESTAPI/ ``` .
 
 ```
 docker build -f Dockerfile -t docker-spring-productsrestapi .
 
 ```
 
-By Executing the above command docker image named ``` docker-spring-productsrestapi ``` is generated. One can see the various images in the docker by executing the command below.
+By Executing the above command docker image named ``` docker-spring-productsrestapi ``` is generated. One can see the various images in the docker by executing the command below in terminal/command prompt.
 
 ```
 docker images
@@ -38,7 +38,7 @@ docker images
 
 Once the docker image is generated then follow the command below to run the generated docker image in the docker container where the port 8080 in the docker container is exposed to port 8088 in the host operating system.
 
-* Here as the input data is used in the JavaApplication then it is important to import the data file from the local to the docker container while running the docker image, so inorder to do that make sure to clone the repository to the desktop folder of locals system and then follow the command below to simultaneously export the inout data into docker container and run the docker image.
+* Here as the input data is used in the JavaApplication then it is important to import the data file from the local to the docker container while running the docker image, so inorder to do that make sure to clone the repository to the desktop folder of local system and then follow the command below to simultaneously export the input data file into docker container and run the docker image.
 
 ```
 docker run -p 8088:8080 -v ~/Desktop/ProductsData-as-a-Service/productsRESTAPI/data:/data docker-spring-productsrestapi
